@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:id="@+id/unit"
+        android:layout_width="10mm"
+        android:layout_height="10mm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="InOrMmUsage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_measure"
+        tools:itemCount="70"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/helper_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/helper_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6"
+        />
+
+
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginVertical="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:src="@drawable/ic_applogo"
+        app:layout_constraintEnd_toStartOf="@id/helper_right"
+        app:layout_constraintStart_toEndOf="@id/helper_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_marginHorizontal="24dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/helper_right"
+        app:layout_constraintStart_toEndOf="@+id/helper_left"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/copyright"
+        android:textColor="@color/bgGray3"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toStartOf="@+id/helper_right"
+        app:layout_constraintStart_toStartOf="@+id/appname"
+        app:layout_constraintTop_toBottomOf="@id/appname" />
+
+
+    <TextView
+        android:id="@+id/pro_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="-10"
+        android:text="@string/pro_badge"
+        android:textColor="@color/fgRed"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/appname"
+        app:layout_constraintEnd_toEndOf="@+id/appname"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toEndOf="@+id/copyright"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.65" />
+
+
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_top"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:backgroundTint="@color/fgBlue"
+        app:iconTint="@color/white"
+        app:strokeColor="@color/white"
+        app:icon="@drawable/ic_to_top"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_unit"
+        app:layout_constraintEnd_toStartOf="@id/helper_right"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_unit"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:backgroundTint="@color/fgBlue"
+        app:strokeColor="@color/white"
+        android:textColor="@color/white"
+        android:text="cm"
+        android:padding="0dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_lock"
+        app:layout_constraintEnd_toStartOf="@id/helper_right"
+        tools:ignore="HardcodedText" />
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_lock"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:backgroundTint="@color/fgBlue"
+        app:iconTint="@color/white"
+        app:strokeColor="@color/white"
+        app:icon="@drawable/ic_lock_open"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_info"
+        app:layout_constraintEnd_toStartOf="@id/helper_right" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_info"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_info"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        android:backgroundTint="@color/fgBlue"
+        app:iconTint="@color/white"
+        app:strokeColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_calibrate"
+        app:layout_constraintEnd_toStartOf="@id/helper_right" />
+
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:rotation="270"
+        android:max="150"
+        android:layout_margin="8dp"
+        android:progress="50"
+        android:progressTint="@color/white"
+        android:progressBackgroundTint="@color/bgGray2"
+        android:thumbTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toStartOf="@+id/btn_calibrate"
+        app:layout_constraintStart_toEndOf="@+id/helper_left" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_calibrate"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:backgroundTint="@color/fgBlue"
+        app:iconTint="@color/white"
+        app:strokeColor="@color/white"
+        app:icon="@drawable/ic_calibrate"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toStartOf="@id/helper_right"/>
+
+    <TextView
+        android:id="@+id/calibrate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/fgBlue"
+        android:text="@string/calibrate"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/scale_factor"
+        app:layout_constraintEnd_toStartOf="@+id/helper_right"
+        app:layout_constraintStart_toEndOf="@+id/helper_left" />
+
+    <TextView
+        android:id="@+id/scale_factor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/factor"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toStartOf="@+id/btn_top"
+        app:layout_constraintStart_toEndOf="@+id/helper_left" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_reset"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/fgBlue"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/ic_reset"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_top"
+        app:layout_constraintEnd_toStartOf="@id/helper_right"
+        app:strokeColor="@color/white" />
+
+
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/fgBlue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/white"
+            android:progress="50"
+            android:secondaryProgressTint="@color/fgRed"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4957302953217465/5845838959"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

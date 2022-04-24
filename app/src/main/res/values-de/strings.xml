@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Display\nLineal</string>
+    <string name="app_name_pro">Display Lineal Pro</string>
+    <string name="impressum">Informationen</string>
+    <string name="factor">Faktor\n%.2f</string>
+    <string name="calibrate">Kalibrieren</string>
+    <string name="creator">von Dr. Rudolf Jagdhuber</string>
+    <string name="pro">Ohne Werbung nutzen</string>
+    <string name="pro_desc">Ein Upgrage auf die Pro-Version entfernt die Werbung und unterstützt mich als Programmierer.</string>
+    <string name="pro_btn">Zur Pro-Version</string>
+    <string name="thanks">Danke! :-)</string>
+    <string name="thanks_desc">Dies ist die Pro-Version von Display Lineal. Vielen Dank für die Unterstützung!</string>
+</resources>
