@@ -215,9 +215,8 @@
 
     <TextView
         android:id="@+id/text_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_width="24sp"
+        android:layout_height="24sp"
         android:gravity="center"
         android:rotation="90"
         android:text="10"
@@ -226,7 +225,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/indicator_0"
         app:layout_constraintEnd_toStartOf="@+id/guide_left"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/mtl"
         app:layout_constraintTop_toTopOf="@id/indicator_0"
         tools:ignore="HardcodedText" />
 
