@@ -78,10 +78,11 @@
                 android:layout_height="100dp"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginVertical="16dp"
-                android:src="@drawable/ic_applogo"
+                android:src="@mipmap/ic_launcher"
+                app:tint="@color/white"
+                android:tintMode="multiply"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/fgBlue"
                 android:contentDescription="@string/app_name" />
 
             <TextView
@@ -118,15 +119,14 @@
                 android:layout_height="wrap_content"
                 android:rotation="-10"
                 android:text="@string/pro_badge"
+                android:layout_marginStart="-8dp"
                 android:textColor="@color/fgRed"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/copyright"
-                app:layout_constraintEnd_toEndOf="@+id/appname"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/copyright"
+                app:layout_constraintStart_toEndOf="@+id/appname"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1" />
+                app:layout_constraintVertical_bias="0.7" />
 
 
             <TextView
@@ -220,6 +220,7 @@
                 android:text="@string/pro_btn"
                 app:icon="@drawable/ic_applogo"
                 app:iconTint="@color/white"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/desc_pro"
